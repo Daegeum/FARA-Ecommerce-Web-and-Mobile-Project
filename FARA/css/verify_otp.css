@@ -1,0 +1,193 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body and page layout */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(500deg, #ffffff, #1e1e1e);
+    padding: 50px;
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    position: relative; /* For positioning the logo */
+    overflow: hidden;
+}
+
+/* Logo container */
+.logo-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+
+.logo-text {
+    font-family: 'Anton SC';
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Form container */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Shadow effect */
+    max-width: 500px; /* Reduced the max-width of the form */
+    width: 100%; /* Make form responsive */
+    margin: auto; /* Center the form */
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form input labels */
+label {
+    margin-bottom: 10px; /* Added margin to space the label */
+    display: block;
+    color: #555;
+    font-weight: bold;
+    font-size: 1.1em; /* Make label text slightly larger */
+}
+
+/* Input fields */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #fafafa;
+}
+
+/* Focus effect for input fields */
+input[type="text"]:focus {
+    border-color: #333;
+    outline: none;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background-color: #1f8ed3;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Button hover effect */
+input[type="submit"]:hover {
+    background-color: #5f81a7;
+    transform: scale(1.05);
+}
+
+/* Paragraph for additional links */
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Links */
+p a {
+    color: #1185ce;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+/* Toast container */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+/* Individual toast */
+.toast {
+    min-width: 250px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Toast body styling */
+.toast-body {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Toast fade-in effect */
+.toast.show {
+    opacity: 1;
+}
+
+/* Success Toast */
+.toast-success {
+    background-color: #28a745;
+}
+
+/* Error Toast */
+.toast-error {
+    background-color: #dc3545;
+}
+
+/* Info Toast */
+.toast-info {
+    background-color: #17a2b8;
+}
+
+/* Warning Toast */
+.toast-warning {
+    background-color: #ffc107;
+}

@@ -1,0 +1,147 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+
+.main {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.topbar .search input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.card-header .btn {
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.card-header .btn:hover {
+    background-color: #2980b9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f1f1f1;
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.logout {
+    color: #e74c3c;
+}
+
+.logout:hover {
+    color: #c0392b;
+}
+
+/* Toast container */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+/* Individual toast */
+.toast {
+    min-width: 250px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Toast body styling */
+.toast-body {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Toast fade-in effect */
+.toast.show {
+    opacity: 1;
+}
+
+/* Success Toast */
+.toast-success {
+    background-color: #28a745;
+}
+
+/* Error Toast */
+.toast-error {
+    background-color: #dc3545;
+}
+
+/* Info Toast */
+.toast-info {
+    background-color: #17a2b8;
+}
+
+/* Warning Toast */
+.toast-warning {
+    background-color: #ffc107;
+}

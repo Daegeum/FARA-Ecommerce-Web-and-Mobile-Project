@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(500deg,#ffffff, #1e1e1e);
+    padding: 50px;
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    position: relative; /* For positioning the logo */
+    overflow: hidden;
+}
+
+.logo-container {
+    position: absolute; /* Positions the logo in the top-left corner */
+    top: 20px;
+    left: 20px;
+    display: flex; /* Aligns the logo and text side-by-side */
+    align-items: center; /* Centers text and image vertically */
+    gap: 10px; /* Adds space between the logo and text */
+}
+
+.logo {
+    max-width: 100px; /* Sets a maximum width for the logo */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.logo-text {
+    font-family: 'Anton SC';
+    font-size: 40px; /* Adjust size as needed */
+    font-weight: bold;
+    color: #333;
+    margin: 0; /* Remove default margin */
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+    max-width: 800px; /* Increased max width for the form */
+    width: 100%; /* Make form responsive */
+    margin: auto; /* Center the form on the page */
+}
+
+h1 {
+    text-align: center; 
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between; /* Space between the columns */
+}
+
+.left-column,
+.center-column,
+.right-column {
+    width: 30%; /* Width of each column */
+}
+
+label {
+    margin-bottom: 5px;
+    display: block; /* Display label as block for better spacing */
+    color: #555;
+    font-weight: bold; /* Bold labels for emphasis */
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+input[type="password"]{
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px; /* Keep padding for comfort */
+    height: 15px; /* Set a fixed height for inputs */
+    margin-bottom: 15px; /* Increased space between fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Standard font size for better readability */
+    display: block; /* Make input a block element */
+}
+
+input[type="submit"] {
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px; /* Keep padding */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Standard font size */
+    width: 100%; /* Full width button for small screens */
+    max-width: 200px; /* Maximum width for larger screens */
+    margin: 20px auto; /* Center the button with auto margins */
+    display: block; /* Make it a block element */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effect */
+}
+
+input[type="submit"]:hover {
+    background-color: #5f81a7; /* Change background on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+p {
+    text-align: center; /* Center the paragraph */
+    margin-top: 10px; /* Space above the paragraph */
+}
+
+p a {
+    color: #1185ce; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+p a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+/* Toast container */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+/* Individual toast */
+.toast {
+    min-width: 250px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Toast body styling */
+.toast-body {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Toast fade-in effect */
+.toast.show {
+    opacity: 1;
+}
+
+/* Success Toast */
+.toast-success {
+    background-color: #28a745;
+}
+
+/* Error Toast */
+.toast-error {
+    background-color: #dc3545;
+}
+
+/* Info Toast */
+.toast-info {
+    background-color: #17a2b8;
+}
+
+/* Warning Toast */
+.toast-warning {
+    background-color: #ffc107;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input[type="password"] {
+    width: 90%;
+
+}
+
+.password-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
