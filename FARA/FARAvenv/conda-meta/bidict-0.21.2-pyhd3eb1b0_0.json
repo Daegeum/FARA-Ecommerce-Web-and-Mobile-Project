@@ -1,0 +1,330 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.6",
+    "setuptools"
+  ],
+  "extracted_package_dir": "C:\\anaconda\\pkgs\\bidict-0.21.2-pyhd3eb1b0_0",
+  "files": [
+    "Lib/site-packages/bidict-0.21.2.dist-info/INSTALLER",
+    "Lib/site-packages/bidict-0.21.2.dist-info/LICENSE",
+    "Lib/site-packages/bidict-0.21.2.dist-info/METADATA",
+    "Lib/site-packages/bidict-0.21.2.dist-info/RECORD",
+    "Lib/site-packages/bidict-0.21.2.dist-info/REQUESTED",
+    "Lib/site-packages/bidict-0.21.2.dist-info/WHEEL",
+    "Lib/site-packages/bidict-0.21.2.dist-info/direct_url.json",
+    "Lib/site-packages/bidict-0.21.2.dist-info/top_level.txt",
+    "Lib/site-packages/bidict/__init__.py",
+    "Lib/site-packages/bidict/_abc.py",
+    "Lib/site-packages/bidict/_base.py",
+    "Lib/site-packages/bidict/_bidict.py",
+    "Lib/site-packages/bidict/_delegating.py",
+    "Lib/site-packages/bidict/_dup.py",
+    "Lib/site-packages/bidict/_exc.py",
+    "Lib/site-packages/bidict/_frozenbidict.py",
+    "Lib/site-packages/bidict/_frozenordered.py",
+    "Lib/site-packages/bidict/_iter.py",
+    "Lib/site-packages/bidict/_mut.py",
+    "Lib/site-packages/bidict/_named.py",
+    "Lib/site-packages/bidict/_orderedbase.py",
+    "Lib/site-packages/bidict/_orderedbidict.py",
+    "Lib/site-packages/bidict/_typing.py",
+    "Lib/site-packages/bidict/_version.py",
+    "Lib/site-packages/bidict/metadata.py",
+    "Lib/site-packages/bidict/py.typed",
+    ".nonadmin",
+    "Lib/site-packages/bidict/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_abc.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_base.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_bidict.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_delegating.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_dup.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_exc.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_frozenbidict.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_frozenordered.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_iter.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_mut.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_named.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_orderedbase.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_orderedbidict.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_typing.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/_version.cpython-312.pyc",
+    "Lib/site-packages/bidict/__pycache__/metadata.cpython-312.pyc"
+  ],
+  "fn": "bidict-0.21.2-pyhd3eb1b0_0.conda",
+  "license": "MPL-2.0",
+  "link": {
+    "source": "C:\\anaconda\\pkgs\\bidict-0.21.2-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "f56f67b0c2dd291b772b4c9aedf5626b",
+  "name": "bidict",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\anaconda\\pkgs\\bidict-0.21.2-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/bidict-0.21.2.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/bidict-0.21.2.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+        "sha256_in_prefix": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+        "size_in_bytes": 16725
+      },
+      {
+        "_path": "site-packages/bidict-0.21.2.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "ea9df7a049caea220404ce28ef040b18f5327981ed73ec845bafecd393777797",
+        "sha256_in_prefix": "ea9df7a049caea220404ce28ef040b18f5327981ed73ec845bafecd393777797",
+        "size_in_bytes": 11630
+      },
+      {
+        "_path": "site-packages/bidict-0.21.2.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "62c74f3f8c5d3a928469a62b93f821198c73ae93d269212154a2601beaa6d853",
+        "sha256_in_prefix": "62c74f3f8c5d3a928469a62b93f821198c73ae93d269212154a2601beaa6d853",
+        "size_in_bytes": 2804
+      },
+      {
+        "_path": "site-packages/bidict-0.21.2.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/bidict-0.21.2.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "a21d0d298ad372ed62d7ec20ac8d5c9e19236088bc589fbca9df49aebe7fcb81",
+        "sha256_in_prefix": "a21d0d298ad372ed62d7ec20ac8d5c9e19236088bc589fbca9df49aebe7fcb81",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/bidict-0.21.2.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "3b77247e252400ed808a067bc1e4c9d923d7ab4fc10b0402a6000fefe26fff90",
+        "sha256_in_prefix": "3b77247e252400ed808a067bc1e4c9d923d7ab4fc10b0402a6000fefe26fff90",
+        "size_in_bytes": 79
+      },
+      {
+        "_path": "site-packages/bidict-0.21.2.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "5ae40ed368e9d0e0e2a12eec268687837249e7fde1e92c68f51213bcd18f6267",
+        "sha256_in_prefix": "5ae40ed368e9d0e0e2a12eec268687837249e7fde1e92c68f51213bcd18f6267",
+        "size_in_bytes": 7
+      },
+      {
+        "_path": "site-packages/bidict/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0366542b88d31cd37a4f741469287bc6e23073e62d830ea054b1cdc74ec3ec5a",
+        "sha256_in_prefix": "0366542b88d31cd37a4f741469287bc6e23073e62d830ea054b1cdc74ec3ec5a",
+        "size_in_bytes": 3910
+      },
+      {
+        "_path": "site-packages/bidict/_abc.py",
+        "path_type": "hardlink",
+        "sha256": "8ab116b289450a9f29b3bece2a65b0074813ae95dce5b7b4441747690a0fc9b9",
+        "sha256_in_prefix": "8ab116b289450a9f29b3bece2a65b0074813ae95dce5b7b4441747690a0fc9b9",
+        "size_in_bytes": 4626
+      },
+      {
+        "_path": "site-packages/bidict/_base.py",
+        "path_type": "hardlink",
+        "sha256": "93ba0b1706ffe993073217c8db5ee19ccf967c9e28c55313a25d411b5e04ddc0",
+        "sha256_in_prefix": "93ba0b1706ffe993073217c8db5ee19ccf967c9e28c55313a25d411b5e04ddc0",
+        "size_in_bytes": 16180
+      },
+      {
+        "_path": "site-packages/bidict/_bidict.py",
+        "path_type": "hardlink",
+        "sha256": "f391b54f259e3192c4ef41cafaac0256e83e6c275a2376c87a8071273c129244",
+        "sha256_in_prefix": "f391b54f259e3192c4ef41cafaac0256e83e6c275a2376c87a8071273c129244",
+        "size_in_bytes": 2005
+      },
+      {
+        "_path": "site-packages/bidict/_delegating.py",
+        "path_type": "hardlink",
+        "sha256": "5226d97b0c2098df22044099b6310bc0a979ce172ec589f2cb682c8805c17b77",
+        "sha256_in_prefix": "5226d97b0c2098df22044099b6310bc0a979ce172ec589f2cb682c8805c17b77",
+        "size_in_bytes": 1313
+      },
+      {
+        "_path": "site-packages/bidict/_dup.py",
+        "path_type": "hardlink",
+        "sha256": "8f40d2b1e82e21d0a0021ab19b4667dbcf3bd75d33c7bd05d7d2efc3b8626b28",
+        "sha256_in_prefix": "8f40d2b1e82e21d0a0021ab19b4667dbcf3bd75d33c7bd05d7d2efc3b8626b28",
+        "size_in_bytes": 1819
+      },
+      {
+        "_path": "site-packages/bidict/_exc.py",
+        "path_type": "hardlink",
+        "sha256": "9ca386ab1a8ebf28e17a1f8f828f9d65959146f3c4598c83f14926e5747c58d9",
+        "sha256_in_prefix": "9ca386ab1a8ebf28e17a1f8f828f9d65959146f3c4598c83f14926e5747c58d9",
+        "size_in_bytes": 1053
+      },
+      {
+        "_path": "site-packages/bidict/_frozenbidict.py",
+        "path_type": "hardlink",
+        "sha256": "218308cec9bda405d34bcd7d4f0ef3fd54cb204662af8a0b25badc45ce7214ff",
+        "sha256_in_prefix": "218308cec9bda405d34bcd7d4f0ef3fd54cb204662af8a0b25badc45ce7214ff",
+        "size_in_bytes": 2494
+      },
+      {
+        "_path": "site-packages/bidict/_frozenordered.py",
+        "path_type": "hardlink",
+        "sha256": "138933048a2b8992eeb61f48d65979eca7a5bd437fc4302f663407ec635d9f7d",
+        "sha256_in_prefix": "138933048a2b8992eeb61f48d65979eca7a5bd437fc4302f663407ec635d9f7d",
+        "size_in_bytes": 3224
+      },
+      {
+        "_path": "site-packages/bidict/_iter.py",
+        "path_type": "hardlink",
+        "sha256": "17dce81ecf88ae4b9cba36d11a7309b251ff19cfd0ae56b8324d6c3af9fb10b8",
+        "sha256_in_prefix": "17dce81ecf88ae4b9cba36d11a7309b251ff19cfd0ae56b8324d6c3af9fb10b8",
+        "size_in_bytes": 2333
+      },
+      {
+        "_path": "site-packages/bidict/_mut.py",
+        "path_type": "hardlink",
+        "sha256": "3015f382599e3499e245b759d42d13c75e2972c681762d4d3da685188cd91298",
+        "sha256_in_prefix": "3015f382599e3499e245b759d42d13c75e2972c681762d4d3da685188cd91298",
+        "size_in_bytes": 7352
+      },
+      {
+        "_path": "site-packages/bidict/_named.py",
+        "path_type": "hardlink",
+        "sha256": "fd6423a33f6913577f1f05505f4e6f9f94ed84e4443b0e3dc837454ace65bd4e",
+        "sha256_in_prefix": "fd6423a33f6913577f1f05505f4e6f9f94ed84e4443b0e3dc837454ace65bd4e",
+        "size_in_bytes": 3784
+      },
+      {
+        "_path": "site-packages/bidict/_orderedbase.py",
+        "path_type": "hardlink",
+        "sha256": "c8c2117c3b58e43409a00788e58bc85b8f4ee3632e2aa2bcab10eb733af53506",
+        "sha256_in_prefix": "c8c2117c3b58e43409a00788e58bc85b8f4ee3632e2aa2bcab10eb733af53506",
+        "size_in_bytes": 12196
+      },
+      {
+        "_path": "site-packages/bidict/_orderedbidict.py",
+        "path_type": "hardlink",
+        "sha256": "b647c03317a12deb4ca93ac6a10abd29f74ea6045d8735aaa7696693aff8bcbd",
+        "sha256_in_prefix": "b647c03317a12deb4ca93ac6a10abd29f74ea6045d8735aaa7696693aff8bcbd",
+        "size_in_bytes": 3409
+      },
+      {
+        "_path": "site-packages/bidict/_typing.py",
+        "path_type": "hardlink",
+        "sha256": "de5abec198561b29f7abb7aec3a60aecbc059f1395075a9da97d71d47716e0d8",
+        "sha256_in_prefix": "de5abec198561b29f7abb7aec3a60aecbc059f1395075a9da97d71d47716e0d8",
+        "size_in_bytes": 862
+      },
+      {
+        "_path": "site-packages/bidict/_version.py",
+        "path_type": "hardlink",
+        "sha256": "7b85aedc5e2dfa08f54da88b61a758110ff747ca4d1b3e178b52b878dd56148c",
+        "sha256_in_prefix": "7b85aedc5e2dfa08f54da88b61a758110ff747ca4d1b3e178b52b878dd56148c",
+        "size_in_bytes": 117
+      },
+      {
+        "_path": "site-packages/bidict/metadata.py",
+        "path_type": "hardlink",
+        "sha256": "86d1177aabbb92932759e44aae5e1c5096414086c17a0c60bbf6f1159d292246",
+        "sha256_in_prefix": "86d1177aabbb92932759e44aae5e1c5096414086c17a0c60bbf6f1159d292246",
+        "size_in_bytes": 1812
+      },
+      {
+        "_path": "site-packages/bidict/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_abc.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_base.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_bidict.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_delegating.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_dup.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_exc.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_frozenbidict.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_frozenordered.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_iter.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_mut.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_named.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_orderedbase.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_orderedbidict.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_typing.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/_version.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/bidict/__pycache__/metadata.cpython-312.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "257e828b15a5b48088ffd68c7316467d1d0bdb905788eaa5a2a6ba4dbb80f680",
+  "size": 33357,
+  "subdir": "noarch",
+  "timestamp": 1607541129000,
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/bidict-0.21.2-pyhd3eb1b0_0.conda",
+  "version": "0.21.2"
+}

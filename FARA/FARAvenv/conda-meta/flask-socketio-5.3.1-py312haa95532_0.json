@@ -1,0 +1,148 @@
+{
+  "build": "py312haa95532_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/win-64",
+  "constrains": [],
+  "depends": [
+    "flask >=0.9",
+    "python >=3.12,<3.13.0a0",
+    "python-socketio >=5.0.2"
+  ],
+  "extracted_package_dir": "C:\\anaconda\\pkgs\\flask-socketio-5.3.1-py312haa95532_0",
+  "files": [
+    "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/INSTALLER",
+    "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/LICENSE",
+    "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/METADATA",
+    "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/RECORD",
+    "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/REQUESTED",
+    "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/WHEEL",
+    "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/direct_url.json",
+    "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/top_level.txt",
+    "Lib/site-packages/flask_socketio/__init__.py",
+    "Lib/site-packages/flask_socketio/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/flask_socketio/__pycache__/namespace.cpython-312.pyc",
+    "Lib/site-packages/flask_socketio/__pycache__/test_client.cpython-312.pyc",
+    "Lib/site-packages/flask_socketio/namespace.py",
+    "Lib/site-packages/flask_socketio/test_client.py",
+    ".nonadmin"
+  ],
+  "fn": "flask-socketio-5.3.1-py312haa95532_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "C:\\anaconda\\pkgs\\flask-socketio-5.3.1-py312haa95532_0",
+    "type": 1
+  },
+  "md5": "6535362444593118dc36cfd22cc45af3",
+  "name": "flask-socketio",
+  "package_tarball_full_path": "C:\\anaconda\\pkgs\\flask-socketio-5.3.1-py312haa95532_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "68d0966e480a8d2fd3d5c26d002c996ef08cdfa2b15a77d0d0b593b9abee60a4",
+        "sha256_in_prefix": "68d0966e480a8d2fd3d5c26d002c996ef08cdfa2b15a77d0d0b593b9abee60a4",
+        "size_in_bytes": 1082
+      },
+      {
+        "_path": "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "4b5fcc634a7559ff640919d6f88e57d384f1beac50cc008ea9ecc2514755bef5",
+        "sha256_in_prefix": "4b5fcc634a7559ff640919d6f88e57d384f1beac50cc008ea9ecc2514755bef5",
+        "size_in_bytes": 2645
+      },
+      {
+        "_path": "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "4ac427cf343500e8630c5a1cf41885510a87103c6d43ab0b24822398f0892ba7",
+        "sha256_in_prefix": "4ac427cf343500e8630c5a1cf41885510a87103c6d43ab0b24822398f0892ba7",
+        "size_in_bytes": 1146
+      },
+      {
+        "_path": "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "c903798389a0e00c9b4639208bef72cb889010589b1909a5cfbf0f8a4e4eafe0",
+        "sha256_in_prefix": "c903798389a0e00c9b4639208bef72cb889010589b1909a5cfbf0f8a4e4eafe0",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "8e2cc46dd82368c80f7a6bb77fed447eabd2f18d5fce850c5a2016b359809fcb",
+        "sha256_in_prefix": "8e2cc46dd82368c80f7a6bb77fed447eabd2f18d5fce850c5a2016b359809fcb",
+        "size_in_bytes": 122
+      },
+      {
+        "_path": "Lib/site-packages/Flask_SocketIO-5.3.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "0b5ba0cd0049dc71d426c586cf2b7bd17455397fb2e0250047c3162a3c09390f",
+        "sha256_in_prefix": "0b5ba0cd0049dc71d426c586cf2b7bd17455397fb2e0250047c3162a3c09390f",
+        "size_in_bytes": 15
+      },
+      {
+        "_path": "Lib/site-packages/flask_socketio/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "aefbd5be4da93fdb249fc57e562cae6ebc8e6b909a1c8554a319ca0428e0a63f",
+        "sha256_in_prefix": "aefbd5be4da93fdb249fc57e562cae6ebc8e6b909a1c8554a319ca0428e0a63f",
+        "size_in_bytes": 54599
+      },
+      {
+        "_path": "Lib/site-packages/flask_socketio/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "f22f0675074166453d3860e32c9885bbd7e081b3796504b43536110bf9ed242c",
+        "sha256_in_prefix": "f22f0675074166453d3860e32c9885bbd7e081b3796504b43536110bf9ed242c",
+        "size_in_bytes": 57752
+      },
+      {
+        "_path": "Lib/site-packages/flask_socketio/__pycache__/namespace.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "5f3f86c603378721569b555a9b880502a7d3d691d67fe1d4c2727fde131d7a27",
+        "sha256_in_prefix": "5f3f86c603378721569b555a9b880502a7d3d691d67fe1d4c2727fde131d7a27",
+        "size_in_bytes": 2681
+      },
+      {
+        "_path": "Lib/site-packages/flask_socketio/__pycache__/test_client.cpython-312.pyc",
+        "path_type": "hardlink",
+        "sha256": "b9369fc8fcd00d599022c9a9fc86816b4b04a0926da1b7c69afb0f0b6bb44c4e",
+        "sha256_in_prefix": "b9369fc8fcd00d599022c9a9fc86816b4b04a0926da1b7c69afb0f0b6bb44c4e",
+        "size_in_bytes": 12566
+      },
+      {
+        "_path": "Lib/site-packages/flask_socketio/namespace.py",
+        "path_type": "hardlink",
+        "sha256": "6f7a325c47a6bb6a68fb0a68cb820b4c740c56e550aa27288020f17f299fcffc",
+        "sha256_in_prefix": "6f7a325c47a6bb6a68fb0a68cb820b4c740c56e550aa27288020f17f299fcffc",
+        "size_in_bytes": 2020
+      },
+      {
+        "_path": "Lib/site-packages/flask_socketio/test_client.py",
+        "path_type": "hardlink",
+        "sha256": "e45d4edb7f6df34aadf6470e42568d3f48c945fbe433fb9ef6aa945b0da5802d",
+        "sha256_in_prefix": "e45d4edb7f6df34aadf6470e42568d3f48c945fbe433fb9ef6aa945b0da5802d",
+        "size_in_bytes": 10030
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "flask-socketio",
+  "sha256": "27aac39330228e824fbc08996aa8802be8d45485d9b0b90f348f95ba101fd730",
+  "size": 37003,
+  "subdir": "win-64",
+  "timestamp": 1699556888000,
+  "url": "https://repo.anaconda.com/pkgs/main/win-64/flask-socketio-5.3.1-py312haa95532_0.conda",
+  "version": "5.3.1"
+}

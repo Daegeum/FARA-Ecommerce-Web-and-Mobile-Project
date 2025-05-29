@@ -1,0 +1,388 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "bidict >=0.21.0",
+    "python >=3.6",
+    "python-engineio >=4.1.0"
+  ],
+  "extracted_package_dir": "C:\\anaconda\\pkgs\\python-socketio-5.3.0-pyhd3eb1b0_0",
+  "files": [
+    "Lib/site-packages/python_socketio-5.3.0.dist-info/INSTALLER",
+    "Lib/site-packages/python_socketio-5.3.0.dist-info/LICENSE",
+    "Lib/site-packages/python_socketio-5.3.0.dist-info/METADATA",
+    "Lib/site-packages/python_socketio-5.3.0.dist-info/RECORD",
+    "Lib/site-packages/python_socketio-5.3.0.dist-info/REQUESTED",
+    "Lib/site-packages/python_socketio-5.3.0.dist-info/WHEEL",
+    "Lib/site-packages/python_socketio-5.3.0.dist-info/direct_url.json",
+    "Lib/site-packages/python_socketio-5.3.0.dist-info/top_level.txt",
+    "Lib/site-packages/socketio/__init__.py",
+    "Lib/site-packages/socketio/asgi.py",
+    "Lib/site-packages/socketio/asyncio_aiopika_manager.py",
+    "Lib/site-packages/socketio/asyncio_client.py",
+    "Lib/site-packages/socketio/asyncio_manager.py",
+    "Lib/site-packages/socketio/asyncio_namespace.py",
+    "Lib/site-packages/socketio/asyncio_pubsub_manager.py",
+    "Lib/site-packages/socketio/asyncio_redis_manager.py",
+    "Lib/site-packages/socketio/asyncio_server.py",
+    "Lib/site-packages/socketio/base_manager.py",
+    "Lib/site-packages/socketio/client.py",
+    "Lib/site-packages/socketio/exceptions.py",
+    "Lib/site-packages/socketio/kafka_manager.py",
+    "Lib/site-packages/socketio/kombu_manager.py",
+    "Lib/site-packages/socketio/middleware.py",
+    "Lib/site-packages/socketio/namespace.py",
+    "Lib/site-packages/socketio/packet.py",
+    "Lib/site-packages/socketio/pubsub_manager.py",
+    "Lib/site-packages/socketio/redis_manager.py",
+    "Lib/site-packages/socketio/server.py",
+    "Lib/site-packages/socketio/tornado.py",
+    "Lib/site-packages/socketio/zmq_manager.py",
+    ".nonadmin",
+    "Lib/site-packages/socketio/__pycache__/__init__.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/asgi.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/asyncio_aiopika_manager.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/asyncio_client.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/asyncio_manager.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/asyncio_namespace.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/asyncio_pubsub_manager.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/asyncio_redis_manager.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/asyncio_server.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/base_manager.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/client.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/exceptions.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/kafka_manager.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/kombu_manager.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/middleware.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/namespace.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/packet.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/pubsub_manager.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/redis_manager.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/server.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/tornado.cpython-312.pyc",
+    "Lib/site-packages/socketio/__pycache__/zmq_manager.cpython-312.pyc"
+  ],
+  "fn": "python-socketio-5.3.0-pyhd3eb1b0_0.conda",
+  "license": "MIT",
+  "link": {
+    "source": "C:\\anaconda\\pkgs\\python-socketio-5.3.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "f2400537b4f9a3eae88185d55744bb09",
+  "name": "python-socketio",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\anaconda\\pkgs\\python-socketio-5.3.0-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/python_socketio-5.3.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/python_socketio-5.3.0.dist-info/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "c9e97d3dbc1fbbcdb4f7808b282cd646db887aff4f5313fe6bbe8d4c31405a9c",
+        "sha256_in_prefix": "c9e97d3dbc1fbbcdb4f7808b282cd646db887aff4f5313fe6bbe8d4c31405a9c",
+        "size_in_bytes": 1082
+      },
+      {
+        "_path": "site-packages/python_socketio-5.3.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "4dda2d56654773927a5369c9831221599a8fd47848cbdcf637dd169d63614139",
+        "sha256_in_prefix": "4dda2d56654773927a5369c9831221599a8fd47848cbdcf637dd169d63614139",
+        "size_in_bytes": 3826
+      },
+      {
+        "_path": "site-packages/python_socketio-5.3.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "7f8771df8d1702d7006d5229b2cdb4755de5ea9e8c06d39588946a79c92458e2",
+        "sha256_in_prefix": "7f8771df8d1702d7006d5229b2cdb4755de5ea9e8c06d39588946a79c92458e2",
+        "size_in_bytes": 3683
+      },
+      {
+        "_path": "site-packages/python_socketio-5.3.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/python_socketio-5.3.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "3aa464174798e461ecb0ca2b16395b4c8ab4ef6be91e917ad1f21003a952f710",
+        "sha256_in_prefix": "3aa464174798e461ecb0ca2b16395b4c8ab4ef6be91e917ad1f21003a952f710",
+        "size_in_bytes": 92
+      },
+      {
+        "_path": "site-packages/python_socketio-5.3.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "2cd71cd95470ad56a79cf243994737ce060ebc18447a87b5ee49f7bae40e85ab",
+        "sha256_in_prefix": "2cd71cd95470ad56a79cf243994737ce060ebc18447a87b5ee49f7bae40e85ab",
+        "size_in_bytes": 88
+      },
+      {
+        "_path": "site-packages/python_socketio-5.3.0.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "c5677e1d551a9e1cacfd5cd0413453459057f16e38f1ac85cad61fd597df8afb",
+        "sha256_in_prefix": "c5677e1d551a9e1cacfd5cd0413453459057f16e38f1ac85cad61fd597df8afb",
+        "size_in_bytes": 9
+      },
+      {
+        "_path": "site-packages/socketio/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "3f56778fb61d51dfdd9c1ceab196fdfb72f4285506c8a2b5235ffc2df910bdb7",
+        "sha256_in_prefix": "3f56778fb61d51dfdd9c1ceab196fdfb72f4285506c8a2b5235ffc2df910bdb7",
+        "size_in_bytes": 1529
+      },
+      {
+        "_path": "site-packages/socketio/asgi.py",
+        "path_type": "hardlink",
+        "sha256": "4e2dfca54b7d4cc50365f73f97d0c8dd937d979d17a0e2b48234accf59bffb62",
+        "sha256_in_prefix": "4e2dfca54b7d4cc50365f73f97d0c8dd937d979d17a0e2b48234accf59bffb62",
+        "size_in_bytes": 1807
+      },
+      {
+        "_path": "site-packages/socketio/asyncio_aiopika_manager.py",
+        "path_type": "hardlink",
+        "sha256": "bcb9cd454880a86ff756a79b97a89587e2b827c6839ef90457d082db9d8323ab",
+        "sha256_in_prefix": "bcb9cd454880a86ff756a79b97a89587e2b827c6839ef90457d082db9d8323ab",
+        "size_in_bytes": 4235
+      },
+      {
+        "_path": "site-packages/socketio/asyncio_client.py",
+        "path_type": "hardlink",
+        "sha256": "75aaf5b508d8181e10b6af1430c5dc5b6f2f93a57023f0522f4646e2bd68e6e4",
+        "sha256_in_prefix": "75aaf5b508d8181e10b6af1430c5dc5b6f2f93a57023f0522f4646e2bd68e6e4",
+        "size_in_bytes": 24322
+      },
+      {
+        "_path": "site-packages/socketio/asyncio_manager.py",
+        "path_type": "hardlink",
+        "sha256": "d0694288361e8d47b84c38a1dda03272bb74ad90e138612543af3260ac00aa9e",
+        "sha256_in_prefix": "d0694288361e8d47b84c38a1dda03272bb74ad90e138612543af3260ac00aa9e",
+        "size_in_bytes": 2138
+      },
+      {
+        "_path": "site-packages/socketio/asyncio_namespace.py",
+        "path_type": "hardlink",
+        "sha256": "64398fa63dc1fe910fa92e36f5c1d4b537d3b8876df9d1505252aeffe8252ba6",
+        "sha256_in_prefix": "64398fa63dc1fe910fa92e36f5c1d4b537d3b8876df9d1505252aeffe8252ba6",
+        "size_in_bytes": 8242
+      },
+      {
+        "_path": "site-packages/socketio/asyncio_pubsub_manager.py",
+        "path_type": "hardlink",
+        "sha256": "bdc8003c31ab22c57b63571c5cb594fdcac534cd9e88081fb4286f4c0561c0a8",
+        "sha256_in_prefix": "bdc8003c31ab22c57b63571c5cb594fdcac534cd9e88081fb4286f4c0561c0a8",
+        "size_in_bytes": 7448
+      },
+      {
+        "_path": "site-packages/socketio/asyncio_redis_manager.py",
+        "path_type": "hardlink",
+        "sha256": "ad3ba3b5929f31306b1ff98c94d72606ea533279eec516dfa06bc37a2ce90fe4",
+        "sha256_in_prefix": "ad3ba3b5929f31306b1ff98c94d72606ea533279eec516dfa06bc37a2ce90fe4",
+        "size_in_bytes": 4122
+      },
+      {
+        "_path": "site-packages/socketio/asyncio_server.py",
+        "path_type": "hardlink",
+        "sha256": "b311d7381501424098cb1934d0ae6890a8900f7ce68edec8f35d6fc1a3ebdb1f",
+        "sha256_in_prefix": "b311d7381501424098cb1934d0ae6890a8900f7ce68edec8f35d6fc1a3ebdb1f",
+        "size_in_bytes": 29744
+      },
+      {
+        "_path": "site-packages/socketio/base_manager.py",
+        "path_type": "hardlink",
+        "sha256": "6c78689d8d638e4c1b2f9c5bd2a0e854782358738bf8fffe71c5b1b60c02a89a",
+        "sha256_in_prefix": "6c78689d8d638e4c1b2f9c5bd2a0e854782358738bf8fffe71c5b1b60c02a89a",
+        "size_in_bytes": 7322
+      },
+      {
+        "_path": "site-packages/socketio/client.py",
+        "path_type": "hardlink",
+        "sha256": "d93f231b3bd132e170237ac735c6e197e39df84f743481cf164f3160e0f8552c",
+        "sha256_in_prefix": "d93f231b3bd132e170237ac735c6e197e39df84f743481cf164f3160e0f8552c",
+        "size_in_bytes": 30518
+      },
+      {
+        "_path": "site-packages/socketio/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "ef9855151d794e8b8941c15dec8f6489fce2ef6a6fbdf3595999ac642bbdfbaf",
+        "sha256_in_prefix": "ef9855151d794e8b8941c15dec8f6489fce2ef6a6fbdf3595999ac642bbdfbaf",
+        "size_in_bytes": 924
+      },
+      {
+        "_path": "site-packages/socketio/kafka_manager.py",
+        "path_type": "hardlink",
+        "sha256": "5722c5fe690e500dcbe591adcdf49bae408d862d4cdeee8fbdc428851febbeb9",
+        "sha256_in_prefix": "5722c5fe690e500dcbe591adcdf49bae408d862d4cdeee8fbdc428851febbeb9",
+        "size_in_bytes": 2234
+      },
+      {
+        "_path": "site-packages/socketio/kombu_manager.py",
+        "path_type": "hardlink",
+        "sha256": "3dc88a6819f878d1b338c75b0717db9a75a726cc80bf0119d7628c8324701876",
+        "sha256_in_prefix": "3dc88a6819f878d1b338c75b0717db9a75a726cc80bf0119d7628c8324701876",
+        "size_in_bytes": 5298
+      },
+      {
+        "_path": "site-packages/socketio/middleware.py",
+        "path_type": "hardlink",
+        "sha256": "d4f3170ea9097466531d0693477a3db675920ac529d770498990e419378ce3af",
+        "sha256_in_prefix": "d4f3170ea9097466531d0693477a3db675920ac529d770498990e419378ce3af",
+        "size_in_bytes": 1712
+      },
+      {
+        "_path": "site-packages/socketio/namespace.py",
+        "path_type": "hardlink",
+        "sha256": "4f93f1eca29101e29c0c6e9eb6ae5c6ba9846fefc658a8c72662582bd835629d",
+        "sha256_in_prefix": "4f93f1eca29101e29c0c6e9eb6ae5c6ba9846fefc658a8c72662582bd835629d",
+        "size_in_bytes": 7930
+      },
+      {
+        "_path": "site-packages/socketio/packet.py",
+        "path_type": "hardlink",
+        "sha256": "2c0b32721f5d79fc7b82673181ccd6a72d9ecc5f50719cda197bd0cdbdfd697a",
+        "sha256_in_prefix": "2c0b32721f5d79fc7b82673181ccd6a72d9ecc5f50719cda197bd0cdbdfd697a",
+        "size_in_bytes": 6741
+      },
+      {
+        "_path": "site-packages/socketio/pubsub_manager.py",
+        "path_type": "hardlink",
+        "sha256": "bf3ce698fd1b646c8d96cbc1edfce27e0aa1da238c791eb66826b478cd58b572",
+        "sha256_in_prefix": "bf3ce698fd1b646c8d96cbc1edfce27e0aa1da238c791eb66826b478cd58b572",
+        "size_in_bytes": 7103
+      },
+      {
+        "_path": "site-packages/socketio/redis_manager.py",
+        "path_type": "hardlink",
+        "sha256": "42f7b0aa4b58987534779a39007862cf414668032a97e798ba74b2e3a9117ccf",
+        "sha256_in_prefix": "42f7b0aa4b58987534779a39007862cf414668032a97e798ba74b2e3a9117ccf",
+        "size_in_bytes": 4472
+      },
+      {
+        "_path": "site-packages/socketio/server.py",
+        "path_type": "hardlink",
+        "sha256": "b2f2332c7643bebee695f52915170f6596c04f407f64a5c79a285752cef3fdab",
+        "sha256_in_prefix": "b2f2332c7643bebee695f52915170f6596c04f407f64a5c79a285752cef3fdab",
+        "size_in_bytes": 36556
+      },
+      {
+        "_path": "site-packages/socketio/tornado.py",
+        "path_type": "hardlink",
+        "sha256": "d8ee11532670ec2813058b26732fbb48660d9e0cf6f22a8e2779b5ff30c1cf55",
+        "sha256_in_prefix": "d8ee11532670ec2813058b26732fbb48660d9e0cf6f22a8e2779b5ff30c1cf55",
+        "size_in_bytes": 357
+      },
+      {
+        "_path": "site-packages/socketio/zmq_manager.py",
+        "path_type": "hardlink",
+        "sha256": "8bf481363e1fa54bc74759ca36ca1d81acb01f1ef84b9d27f339f0f61178e014",
+        "sha256_in_prefix": "8bf481363e1fa54bc74759ca36ca1d81acb01f1ef84b9d27f339f0f61178e014",
+        "size_in_bytes": 3661
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/__init__.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/asgi.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/asyncio_aiopika_manager.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/asyncio_client.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/asyncio_manager.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/asyncio_namespace.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/asyncio_pubsub_manager.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/asyncio_redis_manager.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/asyncio_server.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/base_manager.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/client.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/exceptions.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/kafka_manager.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/kombu_manager.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/middleware.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/namespace.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/packet.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/pubsub_manager.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/redis_manager.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/server.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/tornado.cpython-312.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/socketio/__pycache__/zmq_manager.cpython-312.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "7a1b794db81dbaab559bfcec2fe3251b4e0b71e53b0823073d75519bcaf1b10f",
+  "size": 31989,
+  "subdir": "noarch",
+  "timestamp": 1624540222000,
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/python-socketio-5.3.0-pyhd3eb1b0_0.conda",
+  "version": "5.3.0"
+}
