@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background-image: url('../static/images/hero_seller.jpg'); /* Seller-focused hero image */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Navigation Bar - Apply Linear Gradient Background */
+nav, header {
+    background: linear-gradient(500deg, #ffffff, #1e1e1e); /* Linear gradient for the navbar */
+    padding: 10px 20px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow to give depth */
+}
+
+nav a, header a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover, header a:hover {
+    color: #eb5e28; /* Hover color for links */
+}
+
+/* Toast container */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+/* Individual toast */
+.toast {
+    min-width: 250px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Toast body styling */
+.toast-body {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Toast fade-in effect */
+.toast.show {
+    opacity: 1;
+}
+
+/* Success Toast */
+.toast-success {
+    background-color: #28a745;
+}
+
+/* Error Toast */
+.toast-error {
+    background-color: #dc3545;
+}
+
+/* Info Toast */
+.toast-info {
+    background-color: #17a2b8;
+}
+
+/* Warning Toast */
+.toast-warning {
+    background-color: #ffc107;
+}
+
+/* Dashboard Metrics Cards Styling */
+.dashboard-metrics {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between the cards */
+    flex-wrap: wrap; /* Cards will wrap on smaller screens */
+    margin: 20px 0;
+    align-items: center; /* Center vertically on large screens */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Individual Metric Cards */
+.card {
+    flex: 1; /* Cards will take equal space */
+    min-width: 250px; /* Ensures a minimum width */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Spacing below each card */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Specific Styling for Metric Cards */
+.total-sales .card-body {
+    background-color: #28a745; /* Green for Total Sales */
+    color: #fff;
+}
+
+.total-products .card-body {
+    background-color: #007bff; /* Blue for Total Products */
+    color: #fff;
+}
+
+.total-orders .card-body {
+    background-color: #ffc107; /* Yellow for Total Orders */
+    color: #fff;
+}
+
+.commission .card-body {
+    background-color: #17a2b8; /* Info color for Commission */
+    color: #fff;
+}
+
+/* Adjustments for Mobile Screens */
+@media (max-width: 768px) {
+    .card-body p {
+        font-size: 1rem; /* Slightly smaller text for mobile */
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    /* Stack the cards vertically on smaller screens */
+    .dashboard-metrics {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Container for the row, which aligns the items */
+.row {
+    display: flex;                    /* Flexbox layout for the row */
+    justify-content: center;          /* Center items horizontally */
+    align-items: center;              /* Center items vertically */
+    padding: 10px;                    /* Add some padding around the row */
+    gap: 10px;                        /* Optional: adds space between columns */
+}
+
+/* Individual items (e.g., columns) within the row */
+.row .col-md-4 {
+    display: flex;                    /* Flexbox for each item */
+    justify-content: center;          /* Center content horizontally */
+    align-items: center;              /* Center content vertically */
+    border: 2px solid #333;           /* Add border around each item */
+    padding: 15px;                    /* Padding inside each item */
+    margin: 5px;                      /* Optional: space between items */
+    border-radius: 8px;               /* Optional: rounded corners for items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Optional: soft shadow on items */
+    background-color: #fff;           /* Optional: white background for contrast */
+}
+
+/* Optional: Media query to adjust styles on smaller screens */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;       /* Stack items vertically on small screens */
+    }
+
+    .row .col-md-4 {
+        width: 100%;                  /* Make columns full width on small screens */
+    }
+}
+

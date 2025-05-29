@@ -1,0 +1,131 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(500deg, #ffffff, #1e1e1e);
+}
+
+.container {
+    padding: 0.5rem; /* Reduced padding for a more compact form */
+    max-width: 500px; /* Reduce the maximum width of the form */
+    margin: 50px; /* Center the form with smaller margins */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+/* Red color for the asterisk (*) */
+.form-label .required {
+    color: red;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Custom Submit Button Style */
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #007bff;  /* Primary blue color */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
+.btn-primary:focus {
+    outline: none;
+}
+
+.btn-primary:active {
+    background-color: #004085;  /* Even darker blue on click */
+    transform: scale(1);  /* Reset the scale effect on click */
+}
+
+/* Toast container */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+/* Individual toast */
+.toast {
+    min-width: 250px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Toast body styling */
+.toast-body {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Toast fade-in effect */
+.toast.show {
+    opacity: 1;
+}
+
+/* Success Toast */
+.toast-success {
+    background-color: #28a745;
+}
+
+/* Error Toast */
+.toast-error {
+    background-color: #dc3545;
+}
+
+/* Info Toast */
+.toast-info {
+    background-color: #17a2b8;
+}
+
+/* Warning Toast */
+.toast-warning {
+    background-color: #ffc107;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 576px) {
+    .container {
+        padding: 1rem; /* Reduced padding for small screens */
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+    }
+}

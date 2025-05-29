@@ -1,0 +1,168 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 30px;
+    background-color: #34495e; /* Slightly darker background for a more sleek and professional look */
+    margin: 0;
+    box-sizing: border-box;
+    color: #ecf0f1; /* Lighter text color for better contrast */
+}
+
+/* Header styling */
+h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #ecf0f1; /* Lighter color for headers */
+    font-weight: 600;
+    text-align: center; /* Centered for better alignment */
+}
+
+/* Flash messages styling */
+ul.flash-messages {
+    padding: 0;
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+
+ul.flash-messages li {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px; /* Softer rounded corners */
+    font-weight: 500;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for flash messages */
+}
+
+ul.flash-messages li.success {
+    background-color: #28a745; /* Green for success */
+}
+
+ul.flash-messages li.error {
+    background-color: #dc3545; /* Red for errors */
+}
+
+ul.flash-messages li.info {
+    background-color: #17a2b8; /* Blue for info */
+}
+
+/* Chat list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    max-width: 900px; /* Increased width for larger displays */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    background-color: #ffffff;
+    padding: 18px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Stronger box-shadow for depth */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for each chat item */
+li:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow effect */
+}
+
+/* Chat links styling */
+li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+li a:hover {
+    color: #007bff; /* Blue color on hover */
+    text-decoration: underline;
+}
+
+/* Last message and time styling */
+.chat-summary {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.last-message {
+    font-style: italic;
+    color: #7f8c8d; /* Slightly lighter color for the last message */
+    font-size: 14px;
+    max-width: 75%;
+}
+
+.time {
+    font-size: 12px;
+    color: #bdc3c7; /* Light gray color for time */
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+/* Media Query for responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    li {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .chat-summary {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .last-message {
+        margin-bottom: 8px;
+    }
+
+    .time {
+        margin-top: 5px;
+    }
+}
+
+/* Back Button Container Styling */
+.back-button-container {
+    margin-bottom: 20px;
+    text-align: left; /* Align left or center based on preference */
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.back-button:focus {
+    outline: none; /* Removes outline when focused */
+}

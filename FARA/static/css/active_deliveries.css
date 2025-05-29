@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background: #575757;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Order Section */
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items */
+    gap: 30px; /* Increased spacing */
+    padding: 10px;
+}
+
+/* Order Box */
+.feature-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    width: 90%;
+    margin: 0 auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+.feature-box:hover {
+    transform: scale(1.02);
+}
+
+/* Order Box Content */
+.feature-box h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.feature-box p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Order Image */
+.feature-box img {
+    display: block;
+    margin: 15px auto;
+    width: 160px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Section Divider */
+.feature-box hr {
+    margin: 15px 0;
+    border: 0;
+    height: 1px;
+    background: #ddd;
+}
+
+/* Shipping Fee */
+.shipping-fee {
+    font-weight: bold;
+    color: #d9534f;
+    font-size: 18px;
+}
+
+/* No Orders Message */
+.no-orders {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+    margin-top: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+    
+    .sidebar {
+        width: 200px;
+    }
+    
+    .feature-box {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+.get-deliveries-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.get-deliveries-btn:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,144 @@
+/* Static CSS for buyer profile */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d7dec;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-history-container {
+    margin-top: 20px;
+}
+
+.order-item-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.order-item-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px); /* Three cards per row */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.product-image {
+    padding: 10px;
+    text-align: center;
+}
+
+.product-details {
+    padding: 10px;
+    flex-grow: 1; /* Allow details to grow and take available space */
+}
+
+.card-footer {
+    background: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.status-bar {
+    background-color: #e0e0e0; /* Light grey background for the status bar */
+    border-radius: 5px; /* Rounded corners */
+    height: 20px; /* Height of the bar */
+    position: relative; /* Positioning for the fill element */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.status-fill {
+    background-color: #4caf50; /* Default color for the fill */
+    height: 100%; /* Fill height to match the parent */
+    transition: width 0.3s ease; /* Smooth transition for width changes */
+}
+.back-home-btn {
+    display: inline-block;
+    background-color: #1f8ed3; /* Primary button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 25px; /* Rounded corners */
+    font-size: 1em; /* Font size */
+    text-align: center; /* Center text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Button shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.back-home-btn:hover {
+    background-color: #5f81a7; /* Darker color on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.back-home-btn:active {
+    background-color: #4b7092; /* Even darker on click */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Return shadow depth on click */
+}
+
+/* Toast container */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+/* Individual toast */
+.toast {
+    min-width: 250px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Toast body styling */
+.toast-body {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Toast fade-in effect */
+.toast.show {
+    opacity: 1;
+}
+
+/* Success Toast */
+.toast-success {
+    background-color: #28a745;
+}
+
+/* Error Toast */
+.toast-error {
+    background-color: #dc3545;
+}
+
+/* Info Toast */
+.toast-info {
+    background-color: #17a2b8;
+}
+
+/* Warning Toast */
+.toast-warning {
+    background-color: #ffc107;
+}

@@ -1,0 +1,154 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.container {
+  display: flex;
+}
+
+.navigation {
+  width: 250px;
+  background: #2c3e50;
+  height: 100vh;
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 5px;   
+}
+
+.navigation ul li {
+  margin-bottom: 5px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #ecf0f1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.navigation ul li a:hover {
+  background: #34495e;
+}
+
+.navigation ul li a .icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.main {
+  flex-grow: 1;
+  margin-left: 250px; /* Adjusted to allow space for fixed navigation */
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search input {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.cardBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card .numbers {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card .cardName {
+  margin-top: 10px;
+  color: #888;
+}
+/* Toast container */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1050;
+}
+
+/* Individual toast */
+.toast {
+  min-width: 250px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Toast body styling */
+.toast-body {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Toast fade-in effect */
+.toast.show {
+  opacity: 1;
+}
+
+/* Success Toast */
+.toast-success {
+  background-color: #28a745;
+}
+
+/* Error Toast */
+.toast-error {
+  background-color: #dc3545;
+}
+
+/* Info Toast */
+.toast-info {
+  background-color: #17a2b8;
+}
+
+/* Warning Toast */
+.toast-warning {
+  background-color: #ffc107;
+}
