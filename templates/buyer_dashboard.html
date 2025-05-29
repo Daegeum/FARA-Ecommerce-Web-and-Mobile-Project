@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/buyer_dashboard.css">
+    <title>Buyer Dashboard</title>
+</head>
+<body>
+    
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="navbar-container">
+            <a class="navbar-brand" href="{{ url_for('buyer_homepage') }}">
+                <img src="../static/images/purelogo.png" alt="FARA Logo" style="height: 60px;">
+            </a>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('buyer_dashboard') }}"> Products</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <form class="form-inline my-2 my-lg-0" method="POST" action="{{ url_for('buyer_dashboard') }}">
+            <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search" value="{{ search_query }}">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            <a href="{{ url_for('cart') }}" class="ml-2">
+                <img id="cart-icon" src="/static/images/cart.png" alt="Cart Icon">
+            </a>
+            <span id="cart-total" class="ml-2 text-white">{{ cart_total }}</span>
+        </form>
+    </nav>
+
+    <header class="custom-header text-center py-5">
+        <h1 class="display-4 header-title">Welcome to FARA</h1>
+        <p class="lead header-subtitle">Your one-stop shop for the latest trends</p>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="dropdown">
+                <h2 class="drop-header">Categories <span class="arrow">></span></h2>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="{{ url_for('category_products', category_name='Suits & Blazers') }}">Suits & Blazers</a></li>
+                        <li><a href="{{ url_for('category_products', category_name='Casual Shirts & Pants') }}">Casual Shirts & Pants</a></li>
+                        <li><a href="{{ url_for('category_products', category_name='Outerwear & Jackets') }}">Outerwear & Jackets</a></li>
+                        <li><a href="{{ url_for('category_products', category_name='Activewear & Fitness Gear') }}">Activewear & Fitness Gear</a></li>
+                        <li><a href="{{ url_for('category_products', category_name='Shoes & Accessories') }}">Shoes & Accessories</a></li>
+                        <li><a href="{{ url_for('category_products', category_name='Grooming Products') }}">Grooming Products</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="dropdown">
+                <h2 class="drop-header">User Actions <span class="arrow">></span></h2>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="{{ url_for('user_profile') }}">User Profile</a></li>
+                        <li><a href="/logout" onclick="return confirm('Are you sure you want to logout?');">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!-- Flash messages (Toast Notification) -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="toast-container">
+                {% for message in messages %}
+                    <div class="toast toast-success show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+                        <div class="toast-body">
+                            {{ message }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+        
+        <main class="main-content">
+            <h2>Available Products</h2>
+            <div class="product-container">
+                {% if products %}
+                    {% for product in products %}
+                    <a href="{{ url_for('product_detail', product_id=product[0]) }}" class="product-link">
+                        <div class="product-card">  
+                            <h3>{{ product[2] }}</h3>
+                            {% if product[6] %}
+                                <img src="{{ url_for('static', filename=product[6]) }}" class="product-image">
+                            {% else %}
+                                <!-- Placeholder image if no product image is available -->
+                                <img src="{{ url_for('static', filename='images/placeholder.png') }}" class="product-image" alt="No image available">
+                            {% endif %}
+                            <p>Description: {{ product[3] }}</p>
+                            <p>₱{{ product[4] }}</p>
+                        </div>
+                    </a>
+                    {% endfor %}
+                {% else %}
+                    <p>No products available in this category.</p>
+                {% endif %}
+            </div>
+        </main>
+    </div>
+    <script src="/static/js/buyer_dashboard.js"></script>
+
+    <script>
+        // Toast auto-hide
+        setTimeout(function() {
+            const toasts = document.querySelectorAll('.toast');
+            toasts.forEach(toast => {
+                toast.classList.remove('show');
+            });
+        }, 3000);
+    </script>
+</body>
+</html>

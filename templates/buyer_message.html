@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/buyer_message.css">
+    <title>Chat with Seller</title>
+</head>
+<body>
+    <!-- Flash Messages -->
+    <div id="flash-messages">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <a href="{{ url_for('buyer_dashboard') }}" class="back-button">Back to Products</a>
+    </div>
+
+    <div class="chat-container">
+        <h3>Chat with Seller</h3>
+        <div class="messages">
+            {% for message in messages %}
+                <div class="message {% if message.sender_id == session['user_id'] %}sent{% else %}received{% endif %}">
+                    <p><strong>{% if message.sender_id == session['user_id'] %}You{% else %}Seller{% endif %}:</strong></p>
+                    <p>{{ message.message }}</p>
+                    <p><small>{{ message.timestamp }}</small></p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <form method="POST" action="{{ url_for('chat', seller_id=seller_id) }}">
+            <textarea name="message" rows="4" placeholder="Type your message..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+        // Auto-hide flash messages after 3 seconds
+        document.addEventListener('DOMContentLoaded', () => {
+            const flashMessages = document.querySelectorAll('.flash-message');
+            setTimeout(() => {
+                flashMessages.forEach(message => {
+                    message.style.opacity = '0';
+                    setTimeout(() => message.remove(), 500); // Remove after fade-out
+                });
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

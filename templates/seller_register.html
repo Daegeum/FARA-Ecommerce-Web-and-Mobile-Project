@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/seller_register.css">
+    <title>Register Shop</title>
+</head>
+<body>
+
+    <!-- Flash messages (Toast Notification) -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="toast-container">
+            {% for message in messages %}
+                <div class="toast toast-success show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+                    <div class="toast-body">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+
+    <div class="form-container">    
+        <h2>Register Your Shop</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="shop_name">Shop Name</label>
+            <input type="text" id="shop_name" name="shop_name" required placeholder="Enter your shop's name">
+        
+            <label for="shop_image">Shop Image</label>
+            <input type="file" id="shop_image" name="shop_image" accept="image/*" required>
+        
+            <button type="submit">Register Shop</button>
+        </form>
+    </div>   
+
+    <script>
+        // Toast auto-hide
+        setTimeout(function() {
+            const toasts = document.querySelectorAll('.toast');
+            toasts.forEach(toast => {
+                toast.classList.remove('show');
+            });
+        }, 3000);
+    </script>
+</body>
+</html>

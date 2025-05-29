@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/product_detail.css">
+    <title>{{ product.name }} Details</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="navbar-container">
+            <a class="navbar-brand" href="{{ url_for('buyer_homepage') }}">
+                <img src="../static/images/purelogo.png" alt="FARA Logo" style="height: 60px;">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('buyer_dashboard') }}">Products</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+         <!-- Flash messages (Toast Notification) -->
+         {% with messages = get_flashed_messages() %}
+         {% if messages %}
+             <div class="toast-container">
+                 {% for message in messages %}
+                     <div class="toast toast-success show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+                         <div class="toast-body">
+                             {{ message }}
+                         </div>
+                     </div>
+                 {% endfor %}
+             </div>
+         {% endif %}
+     {% endwith %}
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            <a href="{{ url_for('cart') }}" class="ml-2">
+                <img id="cart-icon" src="/static/images/cart.png" alt="Cart Icon">
+            </a>
+            <span id="cart-total" class="ml-2 text-white">0</span>
+        </form>
+    </nav>
+
+    <header class="custom-header text-center py-5">
+        <h1 class="display-4 header-title">Welcome to FARA</h1>
+        <p class="lead header-subtitle">Your one-stop shop for the latest trends</p>
+    </header>
+
+    
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="dropdown">
+                <h2 class="drop-header">User Actions <span class="arrow">></span></h2>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="/logout" onclick="return confirm('Are you sure you want to logout?');">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <h1>Product Details</h1>
+            <div class="product-detail-container">
+                <!-- Left side: Product information with Carousel -->
+                <div class="product-info">
+                    <h2>{{ product.name }}</h2>
+                    {% if product.variations %}
+                        <div id="productCarousel" class="carousel">
+                            <!-- Loop through product variations -->
+                            {% for variation in product.variations %}
+                                <div class="carousel-item {% if loop.first %}active{% endif %}" 
+                                    data-size="{{ variation.size }}" 
+                                    data-color="{{ variation.color }}" 
+                                    data-price="{{ variation.price }}"
+                                    data-quantity="{{ variation.quantity }}">
+                                    {% if variation.image_path %}
+                                        <img src="{{ url_for('static', filename=variation.image_path) }}" 
+                                            alt="{{ variation.size }} - {{ variation.color }}" 
+                                            class="product-image img-fluid">
+                                    {% else %}
+                                        <img src="{{ url_for('static', filename='images/placeholder.png') }}" 
+                                            alt="No image available" 
+                                            class="product-image img-fluid">
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                            
+                            <!-- Carousel controls -->
+                            <a class="carousel-control-prev" onclick="prevSlide()">&#10094;</a>
+                            <a class="carousel-control-next" onclick="nextSlide()">&#10095;</a>
+                        </div>
+                    {% else %}
+                        <!-- Display a single image if no variations -->
+                        <img src="{{ url_for('static', filename=product.image_path or 'images/placeholder.png') }}" 
+                            alt="Product Image" 
+                            class="product-image img-fluid">
+                    {% endif %}
+                </div>
+                
+                <!-- Center: Product details -->
+                <div class="product-details">
+                    <p><strong>Description:</strong> {{ product.description }}</p>
+                    <p><strong>Price:</strong> ₱ <span id="product-price">
+                        {% if product.variations %}
+                            {{ product.variations[0].price }}
+                        {% else %}
+                            {{ product.price }}
+                        {% endif %}
+                    </span> </p>
+                    <p><strong>Seller:</strong> {{ product.first_name }} {{ product.last_name }}</p>
+                    <p><strong>Quantity Available:</strong> 
+                        <span id="variation-quantity">
+                            {% if product.variations %}
+                                {{ product.variations[0].quantity }}
+                            {% else %}
+                                {{ product.stock_quantity }}
+                            {% endif %}
+                        </span>
+                    </p>
+                </div>
+
+                <!-- Right side: Add to Cart / Buy Now buttons -->
+                <div class="product-action">
+                    <form action="{{ url_for('add_to_cart', product_id=product.product_id) }}" method="POST">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" 
+                            value="1" 
+                            max="{{ product.variations[0].quantity if product.variations else product.stock_quantity }}" 
+                            required>
+
+                        {% if product.variations %}
+                            <!-- Size box-style radio buttons -->
+                            <label for="size">Size:</label>
+                            <div class="radio-box-group">
+                                {% for size in product.sizes %}
+                                    <div class="radio-box">
+                                        <input type="radio" id="size_{{ size }}" name="size" value="{{ size }}" required>
+                                        <label for="size_{{ size }}">{{ size }}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+
+                            <!-- Color box-style radio buttons -->
+                            <label for="color">Color:</label>
+                            <div class="radio-box-group">
+                                {% for color in product.colors %}
+                                    <div class="radio-box">
+                                        <input type="radio" id="color_{{ color }}" name="color" value="{{ color }}" required>
+                                        <label for="color_{{ color }}">{{ color }}</label>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                
+                        <button type="submit" class="btn btn-primary">Add to Cart</button>
+                    </form>
+                    
+                    <form action="" method="POST">
+                        <input type="hidden" name="quantity" value="1">
+                        <button type="submit" class="btn btn-success">Buy Now</button>
+                    </form>
+
+                    <a href="{{ url_for('chat', seller_id=product.seller_id) }}" class="btn btn-info mt-3">
+                        Chat with Seller
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../static/js/product_detail.js"></script>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        // Show the correct slide based on size and color selection
+        function updateCarousel(size, color) {
+            slides.forEach((slide, index) => {
+                const slideSize = slide.getAttribute('data-size');
+                const slideColor = slide.getAttribute('data-color');
+                if (size === slideSize && color === slideColor) {
+                    currentSlide = index;
+                    // Update price and stock quantity
+                    const price = slide.getAttribute('data-price');
+                    document.getElementById('product-price').textContent = '' + price;
+                    const quantity = slide.getAttribute('data-quantity');
+                    document.getElementById('variation-quantity').textContent = quantity;
+                    // Update the quantity input max value based on available stock
+                    document.getElementById('quantity').max = quantity;
+                }
+            });
+            showSlide(currentSlide);
+        }
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => showSlide(currentSlide));
+
+        // Update carousel when size or color is selected
+        document.querySelectorAll('input[name="size"], input[name="color"]').forEach(input => {
+            input.addEventListener('change', function () {
+                const size = document.querySelector('input[name="size"]:checked').value;
+                const color = document.querySelector('input[name="color"]:checked').value;
+                updateCarousel(size, color);
+            });
+        });
+    </script>
+</body>
+</html>

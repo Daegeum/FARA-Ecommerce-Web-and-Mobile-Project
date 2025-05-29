@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rider Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #333;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background: #575757;
+        }
+        .main-content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        .dashboard-cards {
+            display: flex;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 200px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .features {
+            margin-top: 30px;
+        }
+        .features h2 {
+            margin-bottom: 10px;
+        }
+        .feature-box {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2 style="text-align: center;">Rider Panel</h2>
+        <a href="{{ url_for('rider_dashboard') }}">🏠 Dashboard</a>
+        <a href="{{ url_for('active_deliveries') }}">📦 Active Deliveries</a>
+        <a href="{{ url_for('ongoing_deliveries') }}">🚚 Ongoing Deliveries</a>
+        <a href="#">💰 Earnings</a>
+        <a href="#">⚙️ Profile Settings</a>
+        <a href="{{ url_for('rider_logout') }}">🚪 Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Welcome, Rider!</h1>
+        <p>Your current dashboard overview.</p>
+
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>🚚 Active Deliveries</h3>
+                <p>{{ active_deliveries }}</p> <!-- Display the count dynamically -->
+            </div>
+        </div>
+        <!-- Features Section -->
+        <div class="features">
+            <h2>Features</h2>
+            <div class="feature-box">
+                <h3>📦 Active Deliveries</h3>
+                <p>Track your ongoing deliveries in real time.</p>
+            </div>
+            <div class="feature-box">
+                <h3>💰 Earnings Report</h3>
+                <p>View your completed deliveries and earnings breakdown.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

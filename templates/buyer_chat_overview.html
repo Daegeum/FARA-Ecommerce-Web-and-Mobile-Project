@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/buyer_chat_overview.css">
+    <title>Chat Overview</title>
+</head>
+<body>
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <a href="{{ url_for('buyer_dashboard') }}" class="back-button">Back to Products</a>
+    </div>
+    
+    <h1>Your Chats</h1>
+    <ul>
+        {% for seller in sellers %}
+            <li>
+                <a href="{{ url_for('buyer_chat', seller_id=seller.seller_id) }}">
+                    Chat with {{ seller.seller_name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

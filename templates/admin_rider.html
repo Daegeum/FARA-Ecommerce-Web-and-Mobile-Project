@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Blocked Users</title>
+    <link rel="stylesheet" href="/static/css/admin_dashboard.css">
+    <link rel="stylesheet" href="/static/css/admin_archive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li class="logo">
+                    <a href="#">
+                        <span class="icon">
+                            <img src="../static/images/purelogo.png" alt="FARA Logo" style="height: 60px;">
+                        </span>
+                        <span class="title">FARA Mens Apparel</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/dashboard">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/customers">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">User Management</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/archive">
+                        <span class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span>
+                        <span class="title">Archive</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/logout" onclick="return confirm('Are you sure you want to logout?');">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Display flash messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul class="flashes">
+                        {% for category, message in messages %}
+                            <li class="{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+
+            <h1>Rider Approvals</h1>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% endwith %}
+        
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Vehicle Type</th>
+                        <th>License</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for rider in riders %}
+                    <tr>
+                        <td>{{ rider.id }}</td>
+                        <td>{{ rider.first_name }} {{ rider.last_name }}</td>
+                        <td>{{ rider.contact_number }}</td>
+                        <td>{{ rider.email }}</td>
+                        <td>{{ rider.vehicle_type }}</td>
+                        <td><a href="{{ url_for('static', filename=rider.license_photo) }}" target="_blank">View</a></td>
+                        <td>{{ rider.status }}</td>
+                        <td>
+                            {% if rider.status == 'pending' %}
+                                <a href="{{ url_for('approve_rider', rider_id=rider.id) }}">✅ Approve</a> |
+                                <a href="{{ url_for('decline_rider', rider_id=rider.id) }}">❌ Decline</a>
+                            {% else %}
+                                <span>✔️ {{ rider.status }}</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/admin_dashboard.js"></script>
+
+    <!-- ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

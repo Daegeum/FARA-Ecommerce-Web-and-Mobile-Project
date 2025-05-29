@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="/static/css/add_product.css"> 
+    <style>
+        /* Toast container */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1050;
+        }
+
+        /* Individual toast */
+        .toast {
+            min-width: 250px;
+            margin-top: 10px;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Toast body styling */
+        .toast-body {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Toast fade-in effect */
+        .toast.show {
+            opacity: 1;
+        }
+
+        /* Success Toast */
+        .toast-success {
+            background-color: #28a745;
+        }
+
+        /* Error Toast */
+        .toast-error {
+            background-color: #dc3545;
+        }
+
+        /* Info Toast */
+        .toast-info {
+            background-color: #17a2b8;
+        }
+
+        /* Warning Toast */
+        .toast-warning {
+            background-color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Product</h1>
+
+        <!-- Flash messages (Toast Notification) -->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="toast-container">
+                {% for message in messages %}
+                    <div class="toast toast-success show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+                        <div class="toast-body">
+                            {{ message }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+
+        <!-- Back to Homepage Button -->
+        <a href="{{ url_for('seller_dashboard') }}" class="back-home-button">Back to Dashboard</a>
+
+        <form action="/add_product" method="POST" enctype="multipart/form-data">
+            <!-- Main Product Details -->
+            <label for="name">Product Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" step="0.01" required>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="" disabled selected>Select a Category</option>
+                <option value="Suits & Blazers">Suits & Blazers</option>
+                <option value="Casual Shirts & Pants">Casual Shirts & Pants</option>
+                <option value="Outerwear & Jackets">Outerwear & Jackets</option>
+                <option value="Activewear & Fitness Gear">Activewear & Fitness Gear</option>
+                <option value="Shoes & Accessories">Shoes & Accessories</option>
+                <option value="Grooming Products">Grooming Products</option>
+            </select>
+
+            <label for="image">Product Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+
+            <!-- Variations Section -->
+            <div id="variations">
+                <h3>Product Variations</h3>
+                <button type="button" onclick="addVariation()">Add Variation</button>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
+
+    <script>
+        
+        // Toast auto-hide
+        setTimeout(function() {
+            const toasts = document.querySelectorAll('.toast');
+            toasts.forEach(toast => {
+                toast.classList.remove('show');
+            });
+        }, 3000);
+    
+        // Add variation dynamically
+        function addVariation() {
+            const variationContainer = document.createElement("div");
+            variationContainer.classList.add("variation");
+
+            variationContainer.innerHTML = `
+                <h4>New Variation</h4>
+                <label>Size:</label>
+                <input type="text" name="variation_size[]" placeholder="e.g., S, M, L" required>
+
+                <label>Color:</label>
+                <input type="text" name="variation_color[]" placeholder="e.g., Red, Blue" required>
+
+                <label>Quantity:</label>
+                <input type="number" name="variation_quantity[]" min="0" required>
+
+                <label>Price for Variation:</label>
+                <input type="number" name="variation_price[]" step="0.01" required placeholder="Price for this variation">
+
+                <label>Variation Image (optional):</label>
+                <input type="file" name="variation_image[]" accept="image/*">
+
+                <button type="button" onclick="removeVariation(this)">Remove Variation</button>
+                <hr>
+            `;
+
+            document.getElementById("variations").appendChild(variationContainer);
+        }
+
+        function removeVariation(button) {
+            button.parentElement.remove();
+        }
+    </script>
+</body>
+</html>

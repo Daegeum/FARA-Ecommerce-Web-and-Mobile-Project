@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/register.css"> 
+    <!-- Add Font Awesome CDN for the eye icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="logo-container">   
+        <img src="/static/images/purelogo.png" alt="Logo" class="logo"> <!-- Replace with the actual path to your logo -->
+        <span class="logo-text">FARA</span>
+    </div>
+    <!-- Flash messages (Toast Notification) -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="toast-container">
+            {% for message in messages %}
+                <div class="toast toast-success show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+                    <div class="toast-body">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+    
+    <form method="POST" action="/register" enctype="multipart/form-data" onsubmit="return validatePassword()">
+        <h1>Register</h1>
+        
+        <div class="form-container">
+            <div class="left-column">
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" required>
+                
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" required>
+                
+                <label for="middle_name">Middle Name:</label>
+                <input type="text" name="middle_name">
+            </div>
+            <div class="center-column">
+                <label for="contact_number">Contact Number:</label>
+                <input type="tel" name="contact_number" required id="contact_number" maxlength="11" pattern="\d{11}" title="Please enter exactly 11 digits. Only numbers are allowed." oninput="validateContactNumber(this)">
+
+                <label for="birthday">Birthday:</label>
+                <input type="date" name="birthday" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="right-column">
+                <label for="password">Password:</label>
+                <div class="password-container">
+                    <input type="password" name="password" id="password" required>
+                    <i class="fas fa-eye" id="toggle-password" onclick="togglePasswordVisibility('password')"></i>
+                </div>
+
+                <label for="confirm_password">Confirm Password:</label>
+                <div class="password-container">
+                    <input type="password" name="confirm_password" id="confirm_password" required>
+                    <i class="fas fa-eye" id="toggle-confirm-password" onclick="togglePasswordVisibility('confirm_password')"></i>
+                </div>
+
+                <label>Role:</label>
+                <label><input type="radio" name="role" value="buyer" required> Buyer</label>
+                <label><input type="radio" name="role" value="seller"> Seller</label>
+                
+                <label for="photo">Valid IDs</label>
+                <input type="file" name="photo" required>
+            </div>
+        </div>
+        <input type="submit" value="Register">
+        <p>Already have an account? <a href="{{url_for('login')}}">Login here</a></p>
+    </form>
+
+    <script src="/static/js/register.js"></script>
+    <script>
+        function validatePassword() {
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm_password").value;
+            
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false;  // Prevent form submission
+            }
+            return true;  // Allow form submission if passwords match
+        }
+
+        // Function to toggle password visibility
+        function togglePasswordVisibility(id) {
+            const passwordField = document.getElementById(id);
+            const icon = document.getElementById("toggle-" + id);
+            const type = passwordField.type === "password" ? "text" : "password";
+            passwordField.type = type;
+            // Toggle eye icon visibility (solid/regular)
+            icon.classList.toggle("fa-eye-slash");
+        }
+    </script>
+</body>
+</html>
