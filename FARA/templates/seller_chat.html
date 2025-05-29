@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/seller_chat.css">
+    <title>Chat with {{ buyer.first_name }}</title>
+</head>
+<body>
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <a href="{{ url_for('seller_chat_overview') }}" class="back-button">Back to Chats</a>  
+    </div>
+
+    <h1>Chat with {{ buyer.first_name }}</h1>
+
+    <div class="chat-container">
+        <div class="messages">
+            {% for message in messages %}
+                <div class="{% if message.sender_id == session['user_id'] %}sent{% else %}received{% endif %}">
+                    <p><strong>{{ message.sender_name }}:</strong></p>
+                    <p>{{ message.message }}</p>
+                    <p><small>{{ message.timestamp }}</small></p>
+                </div>
+            {% endfor %}
+
+          
+        </div>
+
+        <form method="POST">
+            <textarea name="message" rows="4" placeholder="Type your message..." required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    
+</body>
+</html>

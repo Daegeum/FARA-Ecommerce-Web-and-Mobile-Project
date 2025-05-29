@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/seller_homepage.css">
+    <title>Seller Dashboard</title>
+</head>
+<body class="bg-light">
+
+    <!-- Flash messages (Toast Notification) -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="toast-container">
+            {% for message in messages %}
+                <div class="toast toast-success show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+                    <div class="toast-body">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('seller_homepage') }}">
+                <img src="../static/images/purelogo.png" alt="FARA Logo" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('product_bought') }}">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('seller_dashboard') }}">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('seller_chat_overview') }}">Messages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout" onclick="return confirm('Are you sure you want to logout?');">Logout</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center text-light" style="background-image: url('../static/images/hero_seller.webp'); background-size: cover; background-position: center; height: 400px;">
+        <div class="hero-overlay d-flex justify-content-center align-items-center" style="background: rgba(0, 0, 0, 0.6); height: 100%;">
+            <div>
+                <h1 class="display-4 font-weight-bold">Seller Dashboard</h1>
+                <p class="lead">Manage your orders, products, and performance efficiently</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Card Section for Metrics -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Total Sales -->
+            <div class="col-md-4 mb-4">
+                <a href="{{ url_for('sales_report') }}" class="card-link text-decoration-none">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Total Sales</h5>
+                            <p class="lead">₱{{ total_sales }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Total Products -->
+            <div class="col-md-4 mb-4">
+                <a href="{{ url_for('seller_dashboard') }}" class="card-link text-decoration-none">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Total Products</h5>
+                            <p class="lead">{{ total_products }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Total Orders -->
+            <div class="col-md-4 mb-4">
+                <a href="{{ url_for('product_bought') }}" class="card-link text-decoration-none">
+                    <div class="card shadow-sm hover-card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Total Orders</h5>
+                            <p class="lead">{{ total_orders }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Comissions -->
+            <div class="col-md-4 mb-4">
+                <a href="" class="card-link text-decoration-none">
+                    <div class="card shadow-sm hover-card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Commision</h5>
+                            <p class="lead">₱{{ total_commission }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Toast auto-hide
+        setTimeout(function() {
+            const toasts = document.querySelectorAll('.toast');
+            toasts.forEach(toast => {
+                toast.classList.remove('show');
+            });
+        }, 3000);
+    </script>
+</body>
+</html>

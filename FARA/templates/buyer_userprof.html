@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Position the toast container at the top-right */
+        .toast-container {
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            background-color: aqua;
+        }
+        .toast {
+            max-width: auto; /* Control the width of the toast */
+            font-size: 1.2rem; /* Increase font size for bigger message */
+        }
+        .toast-body {
+            font-size: 1.4rem; /* Make the message text bigger */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('user_profile') }}">User Profile</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('buyer_homepage') }}">Homepage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('user_profile') }}">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('buyer_orders') }}">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('buyer_chat_overview') }}">Messages</a>
+                    </li>            
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Flash messages (Toast Notification) -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="toast-container">
+                {% for message in messages %}
+                    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="3000"> <!-- Set to 3 seconds -->
+                        <div class="toast-body">
+                            {{ message }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <!-- Profile Content -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h2>Welcome, {{ user['first_name'] }}</h2>
+                    </div>
+                    <div class="card-body">
+                        <!-- Display profile picture -->
+                        <div class="text-center mb-4">
+                            <img src="{{ profile_picture_url }}" alt="Profile Picture" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                        </div>
+
+                        <!-- Edit profile picture link -->
+                        <div class="text-center mb-4">
+                            <a href="#updateProfilePicture" class="btn btn-secondary" data-toggle="collapse">Edit Profile Picture</a>
+                        </div>
+
+                        <!-- Collapsible form to update profile picture -->
+                        <div id="updateProfilePicture" class="collapse">
+                            <form action="{{ url_for('update_profile_picture') }}" method="POST" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="profile_picture">Change Profile Picture</label>
+                                    <input type="file" name="profile_picture" id="profile_picture" class="form-control-file" accept="image/*">
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Upload</button>
+                            </form>
+                        </div>
+
+                        <!-- Display user details -->
+                        <div class="mb-4">
+                            <p><strong>Full Name:</strong> {{ user['first_name'] }} {{ user['middle_name'] }} {{ user['last_name'] }}</p>
+                            <p><strong>Email:</strong> {{ user['email'] }}</p>
+                            <p><strong>Contact Number:</strong> {{ user['contact_number'] }}</p>
+                            <p><strong>Joined:</strong> {{ user['created_at'] }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Initialize the toasts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var toastElements = document.querySelectorAll('.toast');
+            toastElements.forEach(function(toastElement) {
+                var toast = new bootstrap.Toast(toastElement);
+                toast.show();  // Show the toast
+            });
+        });
+    </script>
+</body>
+</html>

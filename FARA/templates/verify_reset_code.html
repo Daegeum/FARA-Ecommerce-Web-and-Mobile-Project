@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/verify_resetcode.css">
+    <title>Verify Reset Code</title>
+    
+</head>
+<body>
+    
+    <!-- Flash messages (Toast Notification) -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="toast-container">
+            {% for message in messages %}
+                <div class="toast toast-success show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+                    <div class="toast-body">
+                        {{ message }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+    
+    <form method="POST" action="{{ url_for('verify_reset_code', token=token) }}">
+        <h2>Verify Reset Code</h2>
+        <label for="verification_code">Enter the verification code sent to your email:</label>
+        <input type="text" name="verification_code" id="verification_code" required>
+        <button type="submit">Verify</button>
+    </form>
+
+    <script>
+        // Toast auto-hide
+        setTimeout(function() {
+            const toasts = document.querySelectorAll('.toast');
+            toasts.forEach(toast => {
+                toast.classList.remove('show');
+            });
+        }, 3000);
+    </script>
+</body>
+</html>

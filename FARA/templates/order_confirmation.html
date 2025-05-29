@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/order_confirmation.css">
+    <title>Order Confirmation</title>
+</head>
+<body>
+    <div class="container">
+          <!-- Flash messages (Toast Notification) -->
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              <div class="toast-container">
+                  {% for message in messages %}
+                      <div class="toast toast-success show" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="3000">
+                          <div class="toast-body">
+                              {{ message }}
+                          </div>
+                      </div>
+                  {% endfor %}
+              </div>
+          {% endif %}
+      {% endwith %}
+        <h1>Order Confirmation</h1>
+        <div class="confirmation-details">
+            <h2>Thank You for Your Order!</h2>
+            <p>Your order ID: <strong>{{ order.order_id }}</strong></p>
+            <p>Order Date: <strong>{{ order.order_date.strftime('%Y-%m-%d %H:%M:%S') }}</strong></p>
+            <p>Total Amount: <strong>₱{{ order.total_amount | round(2) }}</strong></p>
+            <p>Payment Method: <strong>{{ order.payment_method.capitalize() }}</strong></p>
+        </div>
+
+        <h3>Shipping Address</h3>
+        <div class="shipping-address">
+            <p><strong>Full Name:</strong> {{ order.full_name }}</p>
+            <p><strong>Contact Number:</strong> {{ order.contact_number }}</p>
+            <p><strong>Address:</strong> {{ order.street }}, {{ order.barangay }}, {{ order.city }}, {{ order.province }}, {{ order.region }}</p>
+        </div>
+
+        <h3>Order Summary</h3>
+        <ul class="order-items">
+            {% for item in order_items %}
+            <li class="order-item">
+                <!-- Only display image if it exists for this variation -->
+                {% if item.image_path %}
+                    <img src="{{ url_for('static', filename=item.image_path) }}" alt="{{ item.name }} - {{ item.color }} - {{ item.size }}" class="item-image">
+                {% endif %}
+                <div class="item-details">
+                    <h4>{{ item.name }}</h4>
+                    <p>Quantity: {{ item.quantity }}</p>
+                    <p>Size: {{ item.size }}</p>
+                    <p>Color: {{ item.color if item.color else 'N/A' }}</p>
+                    <p>Price: ₱{{ item.price | round(2) }}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <div class="btn-container">
+            <a href="{{ url_for('buyer_dashboard') }}" class="btn">Return to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Toast auto-hide
+        setTimeout(function() {
+            const toasts = document.querySelectorAll('.toast');
+            toasts.forEach(toast => {
+                toast.classList.remove('show');
+            });
+        }, 3000);
+    </script>
+</body>
+</html>
